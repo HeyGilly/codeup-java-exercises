@@ -30,11 +30,19 @@ public class ConsoleExercise {
 //        System.out.println("Person 3: " + name3);
 //
 
-        Scanner helloWorld = new Scanner(System.in);
-        System.out.println("Enter a Sentence: ");
-        String longSentence = helloWorld.nextLine();
-        System.out.println(longSentence);
+//        Scanner helloWorld = new Scanner(System.in);
+//        System.out.println("Enter a Sentence: ");
+//        String longSentence = helloWorld.nextLine();
+//        System.out.println(longSentence);
 
+        Scanner classroom = new Scanner(System.in);
+        System.out.println("Enter the width and height of the classroom");
+        //
+        Integer Width= classroom.nextInt();
+        Integer Height = classroom.nextInt();
+        //
+        System.out.println("Area: " + (Width * Height));
+        System.out.println("Perimeter:  " + ((2*Width)+(2*Height)));
 
 
     }

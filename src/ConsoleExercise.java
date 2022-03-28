@@ -17,19 +17,23 @@ public class ConsoleExercise {
 //
 //
 
-        Scanner randomWord = new Scanner(System.in);
+//        Scanner randomWord = new Scanner(System.in);
+//
+//        System.out.println("Enter three names: ");
+//        // String input
+//        String name = randomWord.nextLine();
+//        String name2 = randomWord.nextLine();
+//        String name3 = randomWord.nextLine();
+//        // Output input by user
+//        System.out.println("Person 1: " + name);
+//        System.out.println("Person 2: " + name2);
+//        System.out.println("Person 3: " + name3);
+//
 
-        System.out.println("Enter three names: ");
-        // String input
-        String name = randomWord.nextLine();
-        String name2 = randomWord.nextLine();
-        String name3 = randomWord.nextLine();
-        // Output input by user
-        System.out.println("Person 1: " + name);
-        System.out.println("Person 2: " + name2);
-        System.out.println("Person 3: " + name3);
-
-
+        Scanner helloWorld = new Scanner(System.in);
+        System.out.println("Enter a Sentence: ");
+        String longSentence = helloWorld.nextLine();
+        System.out.println(longSentence);
 
 
 

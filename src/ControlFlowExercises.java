@@ -34,10 +34,32 @@ public class ControlFlowExercises {
         //----- For
         // Refactor the previous two exercises to use a for loop instead.
 
-            for (var x = 100; x>-15;x-=5){
-                System.out.println(x);
-            }
+//            for (var x = 100; x>-15;x-=5){
+//                System.out.println(x);
+//            }
 
+        //----- FizzBuzz
+        // [X] Write a program that prints the numbers from 1 to 100.
+        // [X] For multiples of three: print “Fizz” instead of the number.
+        // [X] For the multiples of five: print “Buzz”.
+        // [X] For numbers which are multiples of both three and five: print “FizzBuzz”.
+        int count = 1;
+        while (count < 100) {
+            if (count % 5 == 0 && count % 3 == 0){
+                System.out.println("FizzBuzz");
+                count++;
+            }
+            if (count % 3 == 0){
+                System.out.println("Fizz");
+                count++;
+            }
+            if (count % 5 == 0){
+                System.out.println("Buzz");
+                count++;
+            }
+            System.out.println(count);
+            count++;
+        }
 
 
     }

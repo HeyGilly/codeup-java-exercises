@@ -1,6 +1,8 @@
-public class ControlFlowExercises {
-    public static void main(String args[]){
+import java.util.Locale;
+import java.util.Scanner;
 
+public class ControlFlowExercises {
+    public static void main(String args[]) {
 
 
 //--------  Loops Basics
@@ -43,23 +45,74 @@ public class ControlFlowExercises {
         // [X] For multiples of three: print “Fizz” instead of the number.
         // [X] For the multiples of five: print “Buzz”.
         // [X] For numbers which are multiples of both three and five: print “FizzBuzz”.
-        int count = 1;
-        while (count < 100) {
-            if (count % 5 == 0 && count % 3 == 0){
-                System.out.println("FizzBuzz");
-                count++;
+//        int count = 1;
+//        while (count < 100) {
+//            if (count % 5 == 0 && count % 3 == 0){
+//                System.out.println("FizzBuzz");
+//                count++;
+//            }
+//            if (count % 3 == 0){
+//                System.out.println("Fizz");
+//                count++;
+//            }
+//            if (count % 5 == 0){
+//                System.out.println("Buzz");
+//                count++;
+//            }
+//            System.out.println(count);
+//            count++;
+//        }
+
+
+        //----- Display a table of powers.
+        //  [X] Prompt the user to enter an integer.
+        //  [X] Display a table of squares and cubes from 1 to the value entered.
+        //  [ ] Ask if the user wants to continue.
+        //  [ ] Assume that the user will enter valid data.
+        //  [ ] Only continue if the user agrees to.
+
+        System.out.println("-----------------------------------------------------------------------------");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("What number would you like to go up to? ");
+        Integer num = Integer.valueOf(scanner.next());
+        int squareValue = num * num * num;
+        int cubedvalue = num * num * num * num;
+        if (num == 0) {
+            System.out.println("GameOver!");
+        } else if (num == 1){
+            System.out.println("number   | squared  | cubed");
+            System.out.println("-----------------------------");
+            System.out.println(num + "        |   " + squareValue + "      |   " + cubedvalue);
+            System.out.println("-----------------------------");
+         } else {
+            System.out.println("number   | squared  | cubed");
+            System.out.println("-----------------------------");
+            System.out.println(1 + "        |   " + 1 + "      |   " + 1);
+            System.out.println("-----------------------------");
+            System.out.print("Would you like to continue? yes / no \n");
+            String continueValue = scanner.next();
+            if (continueValue.equals("yes")){
+                System.out.println("-----------------------------");
+                int count = 1;
+                do{
+                    int squareCount = count * count * count;
+                    int cubedCount = count * count * count * count;
+                    System.out.println(count+"        |   "+ squareCount +"      |   "+ cubedCount);
+                    System.out.println("-----------------------------");
+                    count++;
+                } while(count <= num );
+            }else{
+                System.out.println("GameOver!");
             }
-            if (count % 3 == 0){
-                System.out.println("Fizz");
-                count++;
-            }
-            if (count % 5 == 0){
-                System.out.println("Buzz");
-                count++;
-            }
-            System.out.println(count);
-            count++;
         }
+
+
+
+
+
+
+
+
 
 
     }

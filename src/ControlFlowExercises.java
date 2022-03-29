@@ -71,41 +71,73 @@ public class ControlFlowExercises {
         //  [ ] Assume that the user will enter valid data.
         //  [ ] Only continue if the user agrees to.
 
-        System.out.println("-----------------------------------------------------------------------------");
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("What number would you like to go up to? ");
-        Integer num = Integer.valueOf(scanner.next());
-        int squareValue = num * num * num;
-        int cubedvalue = num * num * num * num;
-        if (num == 0) {
-            System.out.println("GameOver!");
-        } else if (num == 1){
-            System.out.println("number   | squared  | cubed");
-            System.out.println("-----------------------------");
-            System.out.println(num + "        |   " + squareValue + "      |   " + cubedvalue);
-            System.out.println("-----------------------------");
-         } else {
-            System.out.println("number   | squared  | cubed");
-            System.out.println("-----------------------------");
-            System.out.println(1 + "        |   " + 1 + "      |   " + 1);
-            System.out.println("-----------------------------");
-            System.out.print("Would you like to continue? yes / no \n");
-            String continueValue = scanner.next();
-            if (continueValue.equals("yes")){
-                System.out.println("-----------------------------");
-                int count = 1;
-                do{
-                    int squareCount = count * count * count;
-                    int cubedCount = count * count * count * count;
-                    System.out.println(count+"        |   "+ squareCount +"      |   "+ cubedCount);
-                    System.out.println("-----------------------------");
-                    count++;
-                } while(count <= num );
-            }else{
-                System.out.println("GameOver!");
-            }
-        }
+//        System.out.println("-----------------------------------------------------------------------------");
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("What number would you like to go up to? ");
+//        Integer num = Integer.valueOf(scanner.next());
+//        int squareValue = num * num * num;
+//        int cubedvalue = num * num * num * num;
+//        if (num == 0) {
+//            System.out.println("GameOver!");
+//        } else if (num == 1){
+//            System.out.println("number   | squared  | cubed");
+//            System.out.println("-----------------------------");
+//            System.out.println(num + "        |   " + squareValue + "      |   " + cubedvalue);
+//            System.out.println("-----------------------------");
+//         } else {
+//            System.out.println("number   | squared  | cubed");
+//            System.out.println("-----------------------------");
+//            System.out.println(1 + "        |   " + 1 + "      |   " + 1);
+//            System.out.println("-----------------------------");
+//            System.out.print("Would you like to continue? yes / no \n");
+//            String continueValue = scanner.next();
+//            if (continueValue.equals("yes")){
+//                System.out.println("-----------------------------");
+//                int count = 1;
+//                do{
+//                    int squareCount = count * count * count;
+//                    int cubedCount = count * count * count * count;
+//                    System.out.println(count+"        |   "+ squareCount +"      |   "+ cubedCount);
+//                    System.out.println("-----------------------------");
+//                    count++;
+//                } while(count <= num );
+//            }else{
+//                System.out.println("GameOver!");
+//            }
+//        }
 
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("What was your Grade? ");
+        Integer num2 = Integer.valueOf(scanner.next());
+
+        System.out.println(num2);
+        System.out.println("Would you like to continue? yes / no \n");
+        String continueValue2 = scanner.next();
+
+        if (continueValue2.equals("yes")){
+                if(num2 > 94){
+                    System.out.println("You made a A+");
+                } else if(num2 > 90){
+                    System.out.println("You made a A-");
+                } else if(num2 > 85){
+                    System.out.println("You made a B+");
+                } else if(num2 > 80){
+                    System.out.println("You made a B-");
+                } else if(num2 > 75){
+                    System.out.println("You made a C+");
+                } else if(num2 > 70){
+                    System.out.println("You made a C-");
+                } else if(num2 > 65){
+                    System.out.println("You made a D+");
+                } else if(num2 > 60){
+                    System.out.println("You made a D-");
+                } else if(num2 < 60){
+                    System.out.println("You failed!");
+                }
+            }else{
+                System.out.println("We dont have to talk about your grade.");
+            }
 
 
 

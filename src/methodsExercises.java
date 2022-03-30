@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class methodsExercises {
+public class methodsExercises<min, max> {
 
 
     //--- 1.  Basic Arithmetic
@@ -32,16 +32,101 @@ public class methodsExercises {
         System.out.println("-------------------------------------------");
         System.out.println("When you divide "+firstNumber+" and "+secondNumber+" you will get: " + division(firstNumber, secondNumber));
         System.out.println("-------------------------------------------");
-        return;
     }
-    public static void main(String args[]){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your first number:  ");
-        int firstNumber = Integer.parseInt(scanner.nextLine());
-        System.out.println("-------------------------------------------");
-        System.out.print("Enter your Next Number:   ");
-        int secondNumber = Integer.parseInt(scanner.nextLine());
 
-        runIt(firstNumber, secondNumber);
+
+
+    // ----- Exercise #2
+    //----      Create a method that validates that user input is in a certain range
+    //----      The method signature should look like this:
+    public static void getInteger(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number between " + min + " and " + max + ": ");
+        int middleNumber = Integer.parseInt(scanner.nextLine());
+
+            if (max < middleNumber || middleNumber < min) {
+                System.out.println("Error: input the correct number");
+                getInteger(min, max);
+            } else {
+                System.out.println("-------------------------------------------");
+                System.out.print("Your number is between " + min + " and " + max + "! \nyour lucky number is: " + middleNumber);
+                System.out.println("\n-------------------------------------------");
+            }
     }
+
+
+    // ----- Exercise #3
+    //----      Prompt the user to enter an integer from 1 to 10.
+    //----      Display the factorial of the number entered by the user.
+    //----      Ask if the user wants to continue.
+    //----      Use a for loop to calculate the factorial.
+    //----     Assume that the user will enter an integer, but verify it’s between 1 and 10.
+    //----     Use the long type to store the factorial.
+    //----     Continue only if the user agrees to.
+    //----     A factorial is a number multiplied by each of the numbers before it.
+
+    public static int exercise3(int num) {
+        Scanner scanner = new Scanner(System.in);
+
+        int max = 10;
+        int min = 0;
+
+        if (min > num || num > max) {
+            System.out.println("Error: input the correct number");
+            System.out.println("Enter any number between 1 and 10:  ");
+            int exercise3Num = Integer.parseInt(scanner.nextLine());
+            exercise3(exercise3Num);
+        } else {
+            System.out.println("-------------------------------------------");
+            long factorial = 1;
+            for(int i = 1; i <= num; ++i) {
+                // factorial = factorial * i;
+                factorial *= i;
+            }
+            System.out.printf("Factorial of %d = %d", num, factorial);
+
+        }
+        return num;
+    }
+
+
+
+
+    public static void main(String args[]) {
+        Scanner scanner = new Scanner(System.in);
+//        //  Exercise#1
+//        System.out.println("-------------------Exercise #1------------------------");
+//        System.out.print("Enter your first number:  ");
+//        int firstNumber = Integer.parseInt(scanner.nextLine());
+//        System.out.println("-------------------------------------------");
+//        System.out.print("Enter your Next Number:   ");
+//        int secondNumber = Integer.parseInt(scanner.nextLine());
+//
+//        runIt(firstNumber, secondNumber);
+
+
+        //  Exercise #2
+//        System.out.println("------------------Exercise #2-------------------------");
+//        System.out.println("Enter any two numbers ");
+//        System.out.print("      First Number please: ");
+//        int num1 = Integer.parseInt(scanner.nextLine());
+//        System.out.print("      Second Number please: ");
+//        int num2 = Integer.parseInt(scanner.nextLine());
+//        getInteger(num1, num2);
+
+        //  Exercise #3
+        System.out.println("------------------Exercise #3-------------------------");
+        System.out.println("Enter any number between 1 and 10:  ");
+        int exercise3Num = Integer.parseInt(scanner.nextLine());
+        exercise3(exercise3Num);
+
+        //Exercise #4
+        System.out.println("------------------Exercise #4-------------------------");
+        System.out.println("Enter the number of sides for a pair of dice:  ");
+        int diceSides = Integer.parseInt(scanner.nextLine());
+
+    }
+
+
+
 }

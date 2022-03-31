@@ -94,37 +94,36 @@ public class methodsExercises<min, max> {
 
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
-//        //  Exercise#1
-//        System.out.println("-------------------Exercise #1------------------------");
-//        System.out.print("Enter your first number:  ");
-//        int firstNumber = Integer.parseInt(scanner.nextLine());
-//        System.out.println("-------------------------------------------");
-//        System.out.print("Enter your Next Number:   ");
-//        int secondNumber = Integer.parseInt(scanner.nextLine());
-//
-//        runIt(firstNumber, secondNumber);
+        //  Exercise#1
+        System.out.println("-------------------Exercise #1------------------------");
+        System.out.print("Enter your first number:  ");
+        int firstNumber = Integer.parseInt(scanner.nextLine());
+        System.out.println("-------------------------------------------");
+        System.out.print("Enter your Next Number:   ");
+        int secondNumber = Integer.parseInt(scanner.nextLine());
+
+        runIt(firstNumber, secondNumber);
 
 
         //  Exercise #2
-//        System.out.println("------------------Exercise #2-------------------------");
-//        System.out.println("Enter any two numbers ");
-//        System.out.print("      First Number please: ");
-//        int num1 = Integer.parseInt(scanner.nextLine());
-//        System.out.print("      Second Number please: ");
-//        int num2 = Integer.parseInt(scanner.nextLine());
-//        getInteger(num1, num2);
+        System.out.println("------------------Exercise #2-------------------------");
+        System.out.println("Enter any two numbers ");
+        System.out.print("      First Number please: ");
+        int num1 = Integer.parseInt(scanner.nextLine());
+        System.out.print("      Second Number please: ");
+        int num2 = Integer.parseInt(scanner.nextLine());
+        getInteger(num1, num2);
 
-//        //  Exercise #3
-//        System.out.println("------------------Exercise #3-------------------------");
-//        System.out.println("Enter any number between 1 and 10:  ");
-//        int exercise3Num = Integer.parseInt(scanner.nextLine());
-//        exercise3(exercise3Num);
+        //  Exercise #3
+        System.out.println("------------------Exercise #3-------------------------");
+        System.out.println("Enter any number between 1 and 10:  ");
+        int exercise3Num = Integer.parseInt(scanner.nextLine());
+        exercise3(exercise3Num);
 
-        //Exercise #4
-//        exercise4();
+        // Exercise #4
+        exercise4();
 
-        //Exercise #5
-        exercise5();
+
 
     }
 
@@ -156,66 +155,6 @@ public class methodsExercises<min, max> {
             choice = scanner.nextLine();
             System.out.println();
         scanner.close();
-        }
-    }
-
-
-    public static void exercise5(){
-        String choice = "y";
-        while (choice.equalsIgnoreCase("y")){
-            // Random
-            Random rand = new Random();
-            Scanner scanner = new Scanner(System.in);
-
-
-            //Start of exercise
-            System.out.println("------------------Exercise #5-------------------------");
-            System.out.println("Welcome to the EXCITING NEW number guessing Game!");
-            System.out.println("Rules: Guess the number between 1-100 and we will tell you HIGHER, LOWER, or if your " +
-                    "right on the " +
-                    "bullet.");
-            System.out.println("Good Luck!");
-            System.out.println();
-            int goldenNumber = rand.nextInt( 100);
-
-
-            formulaGuessingGame(goldenNumber);
-
-
-            //Want to roll again with new dice
-            System.out.println("Roll again? (y/n): ");
-            choice = scanner.nextLine();
-            System.out.println();
-            scanner.close();
-        }
-
-    }
-
-
-    public static void formulaGuessingGame(int goldenNum){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(goldenNum);
-        System.out.println("What is the Golden Number? \n");
-        int userGuessedNumber  = Integer.parseInt(scanner.nextLine());
-
-        System.out.println("the Golden Number is "+goldenNum);
-
-        if ( userGuessedNumber == goldenNum){
-            System.out.println("--------------------------- \n");
-            System.out.println("BING ");
-            System.out.println("BONG ");
-            System.out.println("WINNER WINNER ");
-            System.out.println("CHICKEN DINNER");
-            System.out.println();
-        } else if ( userGuessedNumber>goldenNum){
-            System.out.println("--------------------------- ");
-            System.out.println("LOWER ");
-
-            formulaGuessingGame(goldenNum);
-        } else {
-            System.out.println("---------------------------");
-            System.out.println("HIGHER");
-            formulaGuessingGame(goldenNum);
         }
     }
 }

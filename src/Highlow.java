@@ -3,6 +3,8 @@ import java.util.Scanner;
         import java.util.Random;
 
 public class Highlow {
+
+
     public static void main(String args[]) {
         exercise5();
 
@@ -19,32 +21,33 @@ public class Highlow {
 
             //Start of exercise
             System.out.println("------------------Exercise #5-------------------------");
-            System.out.println("Welcome to the EXCITING NEW number guessing Game!");
-            System.out.println("Rules: Guess the number between 1-100 and we will tell you HIGHER, LOWER, or if your " +
+            System.out.println("~~~     Welcome to the EXCITING NEW number guessing Game!       ~~~");
+            System.out.println("     Rules: Guess the number between 1-100\n     " +
+                    "We will tell you HIGHER, LOWER, or if your " +
                     "right on the " +
                     "bullet.");
-            System.out.println("Good Luck!");
+            System.out.println("     Good Luck!");
+            System.out.println("------------------------------------------");
             System.out.println();
             //random Number Generator
             int goldenNumber = rand.nextInt( 100);
             //method for the guessing game
             formulaGuessingGame(goldenNumber);
             //Want to roll again with new dice
+            System.out.println("------------------------------------------");
             System.out.println("Roll again? (y/n): ");
             choice = scanner.nextLine();
             System.out.println();
         }
+        System.out.println("-----------------GAME-OVER-------------------------");
+
     }
 
 
     public static void formulaGuessingGame(int goldenNum){
         Scanner scanner = new Scanner(System.in);
-        System.out.println(goldenNum);
         System.out.println("What is the Golden Number? \n");
         int userGuessedNumber  = Integer.parseInt(scanner.nextLine());
-
-        System.out.println("the Golden Number is "+goldenNum);
-
         if ( userGuessedNumber == goldenNum){
             System.out.println("--------------------------- \n");
             System.out.println("BING ");

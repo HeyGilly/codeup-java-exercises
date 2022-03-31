@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class methodsExercises<min, max> {
 
@@ -84,7 +85,6 @@ public class methodsExercises<min, max> {
                 factorial *= i;
             }
             System.out.printf("Factorial of %d = %d", num, factorial);
-
         }
         return num;
     }
@@ -114,19 +114,52 @@ public class methodsExercises<min, max> {
 //        int num2 = Integer.parseInt(scanner.nextLine());
 //        getInteger(num1, num2);
 
-        //  Exercise #3
-        System.out.println("------------------Exercise #3-------------------------");
-        System.out.println("Enter any number between 1 and 10:  ");
-        int exercise3Num = Integer.parseInt(scanner.nextLine());
-        exercise3(exercise3Num);
+//        //  Exercise #3
+//        System.out.println("------------------Exercise #3-------------------------");
+//        System.out.println("Enter any number between 1 and 10:  ");
+//        int exercise3Num = Integer.parseInt(scanner.nextLine());
+//        exercise3(exercise3Num);
 
         //Exercise #4
-        System.out.println("------------------Exercise #4-------------------------");
-        System.out.println("Enter the number of sides for a pair of dice:  ");
-        int diceSides = Integer.parseInt(scanner.nextLine());
+        exercise4();
 
     }
 
 
+    public static void exercise4() {
+        String choice = "y";
+        while (choice.equalsIgnoreCase("y")){
+            // Scanner and Random
+            Random rand = new Random();
+            Scanner scanner = new Scanner(System.in);
+            //Start of exercise
+            System.out.println("------------------Exercise #4-------------------------");
+            System.out.println("Enter the number of sides for a pair of dice:  ");
+            int diceSides = Integer.parseInt(scanner.nextLine());
+            // AWESOME random number method
+            int dice1 = rand.nextInt(diceSides);
+            int dice2 = rand.nextInt(diceSides);
+            //If statement if they roll zeros
+            if (dice1 == 0 || dice2 == 0){
+                System.out.println("-------Dice rolled off table--------");
+                System.out.println();
+            }else{
+                System.out.println("-------and you rolled--------");
+                System.out.println("Dice 1: "+dice1);
+                System.out.println("Dice 2: "+dice2);
+            }
+            //Want to roll again with new dice
+            System.out.println("Roll again? (y/n): ");
+            choice = scanner.nextLine();
+            System.out.println();
+        scanner.close();
+        }
+    }
 
-}
+
+    public static void exercise5(){
+
+    }
+
+
+    }

@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class HelloWorld {
 
     public static void main(String[] args){
@@ -25,8 +27,12 @@ public class HelloWorld {
         //Just like the problem before you are turning a string into a double or a float
         myString = String.valueOf(3.14159);
 
-
-
+        //Declare an long variable named myNumber, but do not assign anything to it.
+        //Next try to print out myNumber to the console. What happens?
+        long myNumber = 0;
+        System.out.println(myNumber);
+        // I tried to print out the long variable, but it forced me to add a number.
+        // automatically added a 0
 
     }
 }

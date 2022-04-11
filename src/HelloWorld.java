@@ -34,5 +34,15 @@ public class HelloWorld {
         // I tried to print out the long variable, but it forced me to add a number.
         // automatically added a 0
 
+        //Change your code to assign the value 3.14 to myNumber. What do you notice?
+//          myNumber = 3.14;
+        // does not work because the long needs to turn into a double because of decimals.
+        //  in order to work the code need to EXPLICIT CAST
+        myNumber = (long) 3.14;
+        //which converts larger types into smaller types.
+        // When using this casting you will lose data by the 7th decimal.
+
+
+
     }
 }

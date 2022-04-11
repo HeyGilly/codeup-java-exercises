@@ -20,6 +20,13 @@ public class HelloWorld {
         // here we are using  char to string
         myString = String.valueOf('H');
 
+        //Change your code to assign the value 3.14159 to myString. What happens?
+//        myString = 3.14159;
+        //Just like the problem before you are turning a string into a double or a float
+        myString = String.valueOf(3.14159);
+
+
+
 
     }
 }
